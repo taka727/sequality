@@ -5,10 +5,22 @@ package sequality;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello World";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+      int sum, tosum, oddsum, evensum;
+      int a=2, b=3, c=1, d=10;
+      sum = new Calculate().sum(a, b);
+      tosum = new Calculate().tosum(c, d);
+      oddsum = new Calculate().oddevensum(c, d,1);
+      evensum = new Calculate().oddevensum(c, d,0);
+      System.out.println(new App().getGreeting());
+      System.out.println("Sum of" + a + "and" + b + "is" + sum + ".Average is" + new Calculate().average(sum, 2) + ".");
+
+      System.out
+          .println("Sum of" + c + "and" + d + "is" + tosum + ".Average is" + new Calculate().average(tosum, 10) + ".");
+
+      System.out.println("Sum of odd of" + c + "to" + d + "is" + oddsum + ". Sum of even is" + evensum + ".");
     }
 }
